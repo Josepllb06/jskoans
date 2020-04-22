@@ -1,4 +1,8 @@
 describe("About Objects", function () {
+  it("object type", function() {
+    var empty_object = {};
+    expect(FILL_ME_IN).toBe(typeof(empty_object)).withContext('what is the type of an object?');
+  });
 
   describe("Properties", function () {
     var megalomaniac;
@@ -14,6 +18,24 @@ describe("About Objects", function () {
     it("should confirm that properties are case sensitive", function () {
       expect(megalomaniac.henchwoman).toBe(FILL_ME_IN);
       expect(megalomaniac.henchWoman).toBe(FILL_ME_IN);
+    });
+
+    it("dynamically adding properties", function() {
+      var person = {};
+      person.__ = "Amory Blaine";
+      person.__ = 102;
+
+      expect("Amory Blaine").toBe(person.name).withContext("what is the person's name?");
+      expect(102).toBe(person.age).withContext("what is the person's age?");
+    });
+
+    it("adding properties from strings", function() {
+      var person = {};
+      person["__"] = "Amory Blaine";
+      person["__"] = 102;
+
+      expect("Amory Blaine").toBe(person.name).withContext("what is the person's name?");
+      expect(102).toBe(person.age).withContext("what is the person's age?");
     });
   });
 
