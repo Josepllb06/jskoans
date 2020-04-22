@@ -16,7 +16,7 @@ describe("About Scope", () => {
         })();
         
         expect(outerVariable).toEqual(FILL_ME_IN).withContext('is outerVariable defined in this scope?');
-        expect(typeOf(innerVariable)).toEqual(FILL_ME_IN).withContext('is innerVariable defined in this scope?');
+        expect(typeof(innerVariable)).toEqual(FILL_ME_IN).withContext('is innerVariable defined in this scope?');
     });
 });
 
