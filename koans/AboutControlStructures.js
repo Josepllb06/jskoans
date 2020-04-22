@@ -30,6 +30,20 @@ describe("About Control Structures", () => {
     expect(FILL_ME_IN).toBe(result).withContext('what is the value of result?');
   });
 
+  it("for of", function() {
+    // this syntax will be explained in about objects
+    var person = {
+        number: 3,
+        age: 102
+    };
+    var result = 0;
+    // for in enumerates the property values of an object
+    for (var value of person) {
+        result = result + value;
+    }
+    expect(FILL_ME_IN).toBe(result).withContext('what is the value of result?');
+  });
+
   it("ternary operator", function() {
     var fruit = true ? "apple" : "orange";
     expect(FILL_ME_IN).toBe(fruit).withContext('what is the value of fruit?');
