@@ -9,10 +9,10 @@ describe("About Reflection", () => {
   };
 
   it("typeof", function() {
-    expect(FILL_ME_IN).toBe(typeof({}).withContext('what is the type of an empty object?');
-    expect(FILL_ME_IN).toBe(typeof('apple').withContext('what is the type of a string?');
-    expect(FILL_ME_IN).toBe(typeof(-5).withContext('what is the type of -5?');
-    expect(FILL_ME_IN).toBe(typeof(false).withContext('what is the type of false?');
+    expect(FILL_ME_IN).toBe(typeof({})).withContext('what is the type of an empty object?');
+    expect(FILL_ME_IN).toBe(typeof('apple')).withContext('what is the type of a string?');
+    expect(FILL_ME_IN).toBe(typeof(-5)).withContext('what is the type of -5?');
+    expect(FILL_ME_IN).toBe(typeof(false)).withContext('what is the type of false?');
   });
 
   it("property enumeration", function() {
@@ -23,8 +23,8 @@ describe("About Reflection", () => {
         keys.push(propertyName);
         values.push(person[propertyName]);
     }
-    expect(keys.equalTo(['FILL_ME_IN','FILL_ME_IN','FILL_ME_IN']).toBeTruthy().withContext('what are the property names of the object?');
-    expect(values.equalTo(['FILL_ME_IN',FILL_ME_IN,FILL_ME_IN]).toBeTruthy().withContext('what are the property values of the object?');
+    expect(keys.equalTo(['FILL_ME_IN','FILL_ME_IN','FILL_ME_IN'])).toBeTruthy().withContext('what are the property names of the object?');
+    expect(values.equalTo(['FILL_ME_IN',FILL_ME_IN,FILL_ME_IN])).toBeTruthy().withContext('what are the property values of the object?');
   });
 
   it("hasOwnProperty", function() {

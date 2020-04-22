@@ -11,7 +11,7 @@ describe("About Numbers", () => {
 
   it("NaN", function() {
     var resultOfFailedOperations = 7/'apple';
-    expect(FILL_ME_IN).toBe(isNaN(resultOfFailedOperations).withContext('what will satisfy the equals assertion?');
+    expect(FILL_ME_IN).toBe(isNaN(resultOfFailedOperations)).withContext('what will satisfy the equals assertion?');
     expect(FILL_ME_IN).toBe(resultOfFailedOperations == NaN).withContext('is NaN == NaN?');
   });
 });

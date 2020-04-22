@@ -1,4 +1,4 @@
-desribe("About Truthyness", () => {
+describe("About Truthyness", () => {
 
   it("truthyness of positive numbers", function() {
     var oneIsTruthy = 1 ? true : false;
