@@ -43,9 +43,7 @@ describe('`string.includes()` finds string within another string', () => {
       });
       it('must NOT be a regular expression', () => {
         const regExp = '';
-        // assert.throws(() => {''.includes(regExp)});
-
-        // expect(''.includes(regExp)).toThrow('foo');
+        expect(() => {''.includes(regExp)}).toThrowError()
       });
       describe('coerces the searched "thing" into a string', () => {
         it('e.g. from a number', () => {
