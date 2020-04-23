@@ -3,7 +3,7 @@
 describe('Rest parameters in functions', () => {
   it('must be the last parameter', () => {
     const fn = (...rest) => {
-      expects([1, 2]).toEqual(FILL_ME_IN);
+      expect([1, 2]).toEqual(FILL_ME_IN);
     };
 
     fn(1, 2);
@@ -11,7 +11,7 @@ describe('Rest parameters in functions', () => {
 
   it('can be used to get all other parameters', () => {
     const fn = (firstParam, secondParam, ...rest) => {
-      expects([3,4]).toEqual(FILL_ME_IN);
+      expect([3,4]).toEqual(FILL_ME_IN);
     };
 
     fn(null, 2, 3, 4);
@@ -20,6 +20,6 @@ describe('Rest parameters in functions', () => {
   it('eliminate `arguments`!!!', () => {
     const fn = (firstArg, ...rest) => rest;
     const result = fn(1, 2, 3);
-    expects(result).toEqual(FILL_ME_IN);
+    expect(result).toEqual(FILL_ME_IN);
   });
 });

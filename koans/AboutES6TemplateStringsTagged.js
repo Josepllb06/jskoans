@@ -9,7 +9,7 @@ describe('tagged template strings, are an advanced form of template strings', fu
     }
 
     var evaluated = CHANGE_ME`template string`;
-    expects(evaluated).toEqual('template string');
+    expect(evaluated).toEqual('template string');
   });
 
   describe('the function can access each part of the template', function() {
@@ -23,12 +23,12 @@ describe('tagged template strings, are an advanced form of template strings', fu
       it('the strings are an array', function() {
         var result = FILL_ME_IN;
 
-        expects(tagFunction`template string`).toEqual(result);
+        expect(tagFunction`template string`).toEqual(result);
       });
 
       it('expressions are NOT passed to it', function() {
         var tagged = tagFunction`one${23}`;
-        expects(tagged).toEqual(FILL_ME_IN);
+        expect(tagged).toEqual(FILL_ME_IN);
       });
 
     });
@@ -43,21 +43,21 @@ describe('tagged template strings, are an advanced form of template strings', fu
         function firstValueOnly(strings, first_value) {
           return firstValue;
         }
-        expects(firstValueOnly`uno ${one}, dos ${two}`).toEqual(FILL_ME_IN);
+        expect(firstValueOnly`uno ${one}, dos ${two}`).toEqual(FILL_ME_IN);
       });
 
       it('the 3rd parameter contains the second expression`s value', function() {
         function firstValueOnly(strings, firstValue, secondValue) {
           return secondValue;
         }
-        expects(firstValueOnly`uno ${one}, dos ${two}`).toEqual(FILL_ME_IN);
+        expect(firstValueOnly`uno ${one}, dos ${two}`).toEqual(FILL_ME_IN);
       });
 
       it('using ES6 rest syntax, all values can be accessed via one variable', function() {
         function valuesOnly(stringsArray, ...allValues) { // using the new ES6 rest syntax
           return FILL_ME_IN;
         }
-        expects(valuesOnly`uno=${one}, dos=${two}, tres=${three}`).toEqual([1, 2, 3]);
+        expect(valuesOnly`uno=${one}, dos=${two}, tres=${three}`).toEqual([1, 2, 3]);
       });
     });
   });

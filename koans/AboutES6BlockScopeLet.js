@@ -8,14 +8,14 @@ describe('`let` restricts the scope of the variable to the current block', () =>
       if (true) {
         var varX = FILL_ME_IN;
       }
-      expects(varX).toEqual(true);
+      expect(varX).toEqual(true);
     });
 
     it('`let` restricts scope to inside the block', () => {
       if (true) {
         let letX = true;
       }
-      expects(() => console.log(FILL_ME_IN)).toThrowError()
+      expect(() => console.log(FILL_ME_IN)).toThrowError()
     });
   });
 
@@ -23,14 +23,14 @@ describe('`let` restricts the scope of the variable to the current block', () =>
     it('`let` use in `for` loops', () => {
       for (let key in {x: 1}) {}
 
-      expects(() => console.log(FILL_ME_IN)).toThrowError()
+      expect(() => console.log(FILL_ME_IN)).toThrowError()
     });
 
     it('create artifical scope, using curly braces', () => {
       {
         var letX = true;
       }
-      expects(() => console.log(FILL_ME_IN)).toThrowError()
+      expect(() => console.log(FILL_ME_IN)).toThrowError()
     });
   });
 });

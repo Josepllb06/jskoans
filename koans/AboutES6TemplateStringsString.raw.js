@@ -6,7 +6,7 @@ describe('Use the `raw` property of tagged template strings like so `s.raw`', fu
     function firstChar(strings) {
       return strings.raw;
     }
-    expects(firstChar`\n`).toEqual(FILL_ME_IN);
+    expect(firstChar`\n`).toEqual(FILL_ME_IN);
   });
 
   it('`raw` can access the backslash of a line-break', function() {
@@ -14,21 +14,21 @@ describe('Use the `raw` property of tagged template strings like so `s.raw`', fu
       var lineBreak = strings.raw;
       return lineBreak;
     }
-    expects(firstCharEntered`\n`, FILL_ME_IN);
+    expect(firstCharEntered`\n`, FILL_ME_IN);
   });
 
   describe('`String.raw` as a static function', function(){
     it('concats the raw strings', function() {
-      expects(String.raw`\n`).toEqual(FILL_ME_IN);
+      expect(String.raw`\n`).toEqual(FILL_ME_IN);
     });
 
     it('two raw-templates-string-backslashes equal two escaped backslashes', function() {
-      expects(String.raw`\\`).toEqual(FILL_ME_IN);
+      expect(String.raw`\\`).toEqual(FILL_ME_IN);
     });
 
     it('works on unicodes too', function() {
       var actual = String.raw`\u{1F600}`;
-      expects(actual).toEqual(FILL_ME_IN);
+      expect(actual).toEqual(FILL_ME_IN);
     });
   });
 });

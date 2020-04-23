@@ -9,7 +9,7 @@ describe('Inside a class you can use the `static` keyword', () => {
       class TestFactory {
         static CHANGE_ME() { return new UnitTest(); }
       }
-      expects(TestFactory.makeTest() instanceof UnitTest).toBeTruthy();
+      expect(TestFactory.makeTest() instanceof UnitTest).toBeTruthy();
     });
 
     it('the method name can be dynamic/computed at runtime', () => {
@@ -17,7 +17,7 @@ describe('Inside a class you can use the `static` keyword', () => {
       class TestFactory {
         static [methodName]() { return new UnitTest(); }
       }
-      expects(TestFactory.createTest() instanceof UnitTest).toBeTruthy();
+      expect(TestFactory.createTest() instanceof UnitTest).toBeTruthy();
     });
   });
 
@@ -26,7 +26,7 @@ describe('Inside a class you can use the `static` keyword', () => {
       class UnitTest {
         static get testType() { return 'unit'; }
       }
-      expects(UnitTest.testType).toEqual(FILL_ME_IN);
+      expect(UnitTest.testType).toEqual(FILL_ME_IN);
     });
 
     it('even a static getter name can be dynamic/computed at runtime', () => {
@@ -35,8 +35,8 @@ describe('Inside a class you can use the `static` keyword', () => {
         static get [type]() { return 'integration'; }
       }
 
-      expects('testType' in IntegrationTest).toBeTruthy();
-      expects(IntegrationTest.testType).toEqual('integration');
+      expect('testType' in IntegrationTest).toBeTruthy();
+      expect(IntegrationTest.testType).toEqual('integration');
     });
   });
 });

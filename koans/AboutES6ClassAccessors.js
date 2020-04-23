@@ -7,7 +7,7 @@ describe('Class accessors (getter and setter)', () => {
       get money() { return Infinity; }
     }
 
-    expects(new MyAccount().money).toEqual(FILL_ME_IN);
+    expect(new MyAccount().money).toEqual(FILL_ME_IN);
   });
 
   it('a setter has the prefix `set`', () => {
@@ -18,7 +18,7 @@ describe('Class accessors (getter and setter)', () => {
 
     const account = new MyAccount();
     account.balance = 42;
-    expects(account.balance).toEqual(FILL_ME_IN);
+    expect(account.balance).toEqual(FILL_ME_IN);
   });
 
   describe('dynamic accessors', () => {
@@ -27,7 +27,7 @@ describe('Class accessors (getter and setter)', () => {
       class YourAccount {
         get [balance]() { return -Infinity; }
       }
-      expects(new YourAccount().yourMoney).toEqual(-Infinity);
+      expect(new YourAccount().yourMoney).toEqual(-Infinity);
     });
 
     it('a dynamic setter name as well', function() {
@@ -39,7 +39,7 @@ describe('Class accessors (getter and setter)', () => {
 
       const account = new MyAccount();
       account.balance = 42;
-      expects(account.balance).toEqual(23);
+      expect(account.balance).toEqual(23);
     });
   });
 });

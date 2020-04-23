@@ -4,13 +4,13 @@
 describe('Class creation', () => {
   it('is as simple as `class XXX {}`', function() {
     const instance = new TestClass();
-    expects(typeof instance).toEqual(FILL_ME_IN);
+    expect(typeof instance).toEqual(FILL_ME_IN);
   });
 
   it('a class is block scoped', () => {
     class Outside {}
     {class Inside {}}
-    expects(typeof FILL_ME_IN, 'undefined');
+    expect(typeof FILL_ME_IN, 'undefined');
   });
 
   it('the `constructor` is a special method', function() {
@@ -18,7 +18,7 @@ describe('Class creation', () => {
       constructor(id) { this.id = id }
     }
     const user = new User(42);
-    expects(user.id, FILL_ME_IN);
+    expect(user.id, FILL_ME_IN);
   });
 
   it('defining a method by writing it inside the class body', function() {
@@ -28,7 +28,7 @@ describe('Class creation', () => {
         }
     }
     const notATester = new User();
-    expects(notATester.writesTests(), false);
+    expect(notATester.writesTests(), false);
   });
 
   it('multiple methods need no commas (opposed to object notation)', function() {
@@ -41,14 +41,14 @@ describe('Class creation', () => {
     }
 
     const tester = new User();
-    expects(tester.isLazy(), true);
+    expect(tester.isLazy(), true);
     tester.wroteATest();
-    expects(tester.isLazy(), false);
+    expect(tester.isLazy(), false);
   });
 
   it('anonymous class', () => {
     const classType = typeof {};
 
-    expects(classType, FILL_ME_IN);
+    expect(classType, FILL_ME_IN);
   });
 });
