@@ -7,7 +7,7 @@ describe('`[].entries()` returns an iterator object with all entries', () => {
       const arr = ['a', 'b', 'c'];
       const entriesAsArray = Array.from(arr.___());
       
-      expect([[0,"a"], [1,"b"], [2,"c"]]).toEqual(entriesAsArray)
+      expect(entriesAsArray).toEqual([[0,"a"], [1,"b"], [2,"c"]])
     });
     
     it('empty elements contain the value `undefined`', () => {
@@ -15,7 +15,7 @@ describe('`[].entries()` returns an iterator object with all entries', () => {
       arr[2] = 'three';
       const secondValue = arr.entries();
     
-      expect([1, void 0]).toEqual(secondValue)
+      expect(secondValue).toEqual([1, void 0])
     });
   
     describe('returns an iterable', () => {
@@ -23,7 +23,7 @@ describe('`[].entries()` returns an iterator object with all entries', () => {
         const arr = ['one'];
         const value = arr;
         
-        expect([0, 'one']).toEqual(value)
+        expect(value).toEqual([0, 'one'])
       });
     });
   });
