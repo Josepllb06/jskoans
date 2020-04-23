@@ -5,17 +5,17 @@ describe('spread with arrays', () => {
 
   it('extracts each array item', function() {
     const [a, b] = [...[1, 2]];
-    expects(FILL_ME_IN).toEqual(2);
+    expect(FILL_ME_IN).toEqual(2);
   });
 
   it('in combination with rest', function() {
     const [a, b, ...rest] = [...[0, 1, 2, 3, 4, 5]];
-    expects(FILL_ME_IN, [2, 3, 4, 5]);
+    expect(FILL_ME_IN, [2, 3, 4, 5]);
   });
 
   it('spreading into the rest', function() {
     const [...rest] = [...[1, 2, 3, 4, 5]];
-    expects(FILL_ME_IN).toEqual([1, 2, 3, 4, 5]);
+    expect(FILL_ME_IN).toEqual([1, 2, 3, 4, 5]);
   });
 
   describe('used as function parameter', () => {
@@ -23,8 +23,8 @@ describe('spread with arrays', () => {
       const magicNumbers = [1, 2];
 
       const fn = (magicA, magicB) => {
-        expects(magicNumbers[0]).toEqual(magicA);
-        expects(magicNumbers[1]).toEqual(magicB);
+        expect(magicNumbers[0]).toEqual(magicA);
+        expect(magicNumbers[1]).toEqual(magicB);
       };
 
       fn(...FILL_ME_IN);
@@ -33,7 +33,7 @@ describe('spread with arrays', () => {
     it('pass an array of numbers to Math.max()', function() {
       const max = Math.max(...[23, 0, 42]);
 
-      expects(max).toEqual(FILL_ME_IN);
+      expect(max).toEqual(FILL_ME_IN);
     });
   });
 });
