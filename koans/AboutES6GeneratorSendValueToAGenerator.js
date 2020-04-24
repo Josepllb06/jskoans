@@ -7,28 +7,33 @@ describe('Pass a value to a generator', () => {
       yield 1;
       yield 2;
     }
+
     // way #1
     var convertedToAnArray = Array.from(generatorFunction());
+
     // way #2
     var iterator = generatorFunction();
-    var iteratedOver = [iterator.next().___, iterator.___];
-    expect(convertedToAnArray).toEqual(iteratedOver)
+    var iteratedOver = [iterator.next().value, iterator.next().value];
+
+    expect(convertedToAnArray).toEqual(FILL_ME_IN)
   });
 
   it('pass a value to the iterator', () => {
     function* generatorFunction() {
-      yield 1;
-      yield param;
+      const param = yield 1;
+      return param;
     }
-    var iterator = generatorFunction();
-    var iteratedOver = [iterator.next().value, iterator.next(2).value];
 
-    expect(iteratedOver).toEqual([1, 2])
+    var iterator = generatorFunction();
+    var iteratedOver = [iterator.next().value, iterator.next(FILL_ME_IN).value];
+
+    expect(iteratedOver).toEqual([1, 4])
   });
 
   it('a value passed to the 1st `next()` call is ignored', () => {
     function* generatorFunction() {
-      yield 1;
+      const param = yield 1;
+      return param
 
     }
     let iterator = generatorFunction();
@@ -36,6 +41,6 @@ describe('Pass a value to a generator', () => {
       iterator.next('irrelevant').value,
       iterator.next(2).value
     ];
-    expect(values).toEqual([1, 2])
+    expect(values).toEqual(FILL_ME_IN)
   });
 });

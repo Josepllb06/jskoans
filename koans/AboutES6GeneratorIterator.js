@@ -13,18 +13,13 @@ describe('Generators returns an iterable object', () => {
   });
 
   it('a generator returns an object', () => {
-    const typeOfTheGenerator = '';
+    const typeOfTheGenerator = FILL_ME_IN;
     expect(typeof generator).toEqual(typeOfTheGenerator)
   });
 
   it('a generator object has a key `Symbol.iterator`', () => {
-    const key = '???';
+    const key = FILL_ME_IN;
     expect(key in generator).toEqual(true)
-  });
-
-  it('the `Symbol.iterator` is a function', () => {
-    const theType = typeof generator.Symbol.iterator;
-    expect(theType).toEqual('function')
   });
 
   it('can be looped with `for-of`, which expects an iterable', () => {
@@ -33,6 +28,6 @@ describe('Generators returns an iterable object', () => {
         // no statements needed
       }
     }
-    expect(toThrow(iterateForOf)).toEqual(false)
+    expect(CHANGE_ME).toThrowError()
   });
 });
