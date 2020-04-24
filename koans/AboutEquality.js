@@ -9,11 +9,11 @@ describe("About Equality", () => {
   });
 
   it("equality without type coercion", function() {
-    expect(3 === FILL_ME_IN).withContext('what is exactly equal to 3?').toEqualTruthy();
+    expect(3 === FILL_ME_IN).withContext('what is exactly equal to 3?').toBeTruthy();
   });
 
   it("equality with type coercion", function() {
-    expect(3 == FILL_ME_IN).withContext('what string is equal to 3, with type coercion?').toEqualTruthy();
+    expect(3 == FILL_ME_IN).withContext('what string is equal to 3, with type coercion?').toBeTruthy();
   });
 
   it("string literals", function() {
