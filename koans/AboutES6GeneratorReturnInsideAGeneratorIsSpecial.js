@@ -26,7 +26,7 @@ describe('`return` in a generator function is special', () => {
       expect(returned).toEqual({value: 1, done: false})
     });
     it('a missing `return` returns `{value: undefined, done: true}`', () => {
-      function* generatorFunction() { yield; }	
+      function* generatorFunction() { yield; }
       const returned = generatorFunction().next();
       expect(returned).toEqual({value: void 0, done: true})
     });
@@ -35,7 +35,7 @@ describe('`return` in a generator function is special', () => {
   describe('mixing `return` and `yield`', () => {
     function* generatorFunctionWithYieldAndReturn() {
       yield 1;
-      
+
     }
     it('is possible', () => {
       const iterator = generatorFunctionWithYieldAndReturn();
@@ -52,10 +52,8 @@ describe('`return` in a generator function is special', () => {
     });
     it('two `yield`s returning values', () => {
       function* generatorFunctionWithTwoYields() {
-        
-	
       }
-      expect(Array.from(generatorFunctionWithTwoYields()).toEqual([1, 2])
+      expect(Array.from(generatorFunctionWithTwoYields())).toEqual([1, 2])
     });
     it('return a yielded value by "chaining" `return` and `yield`', () => {
       function* generatorFunction() {
