@@ -18,6 +18,6 @@ describe("About Equality", () => {
 
   it("string literals", function() {
     expect("frankenstein").withContext("quote types are interchangable, but must match.").toEqual(FILL_ME_IN);
-    equal('frankenstein')..withContext("quote types can use both single and double quotes.")toEqual(FILL_ME_IN);
+    equal('frankenstein').withContext("quote types can use both single and double quotes.").toEqual(FILL_ME_IN);
   });
 });
