@@ -4,13 +4,14 @@
 describe('An object literal can also contain getters', () => {
   it('just prefix the property with `get` (and make it a function)', () => {
     const obj = {
-      x() { return 'ax'; }
+      get x() { return 'ax'; }
     };
-    expect(obj.x).toEqual('ax')
+    expect(obj.x).toEqual(FILL_ME_IN)
   });
 
   it('must have NO parameters', () => {
     const obj = {
+      // Change this line to use a getter and fix the test
       x(param) { return 'ax'; }
     };
     expect(obj.x).toEqual('ax')
@@ -19,7 +20,7 @@ describe('An object literal can also contain getters', () => {
   it('can be a computed property (an expression enclosed in `[]`)', () => {
     const keyName = 'x';
     const obj = {
-      get keyName() { return 'ax'; }
+      get [FILL_ME_IN]() { return 'ax'; }
     };
     expect(obj.x).toEqual('ax')
   });
@@ -28,8 +29,8 @@ describe('An object literal can also contain getters', () => {
     const obj = {
       get x() { return 'ax'; }
     };
-    delete obj.y;
-    expect(obj.x).toEqual(void 0)
+    delete obj.x;
+    expect(obj.x).toEqual(FILL_ME_IN)
   });
 
   // The following dont seem to work in the current transpiler version

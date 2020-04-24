@@ -6,34 +6,31 @@ describe('An object literal can also contain setters', () => {
     it('by prefixing the property with `set` (and make it a function)', () => {
       let theX = null;
       const obj = {
-        x(newX) { theX = newX; }
+        set x(newX) { theX = newX; }
       };
-      obj.x = 'the new X';
+      obj.x = FILL_ME_IN;
       expect(theX).toEqual('the new X')
     });
 
     it('must have exactly one parameter', () => {
       let setterCalledWith = void 0;
       const obj = {
-        x() { // <<<<=== it's not a setter yet!
-          if (arguments.length === 1) {
-            setterCalledWith = arguments[0];
-          }
+        // Change this line to make it a setter
+        x() {
+            setterCalledWith = data
         }
       };
-      expect(setterCalledWith).toEqual(obj.x = 'new value')
+      obj.x = 'new value'
+      expect(setterCalledWith).toEqual('new value')
     });
 
     it('can be a computed property (an expression enclosed in `[]`)', () => {
       const publicPropertyName = 'x';
-      const privatePropertyName = '_' + publicPropertyName;
       const obj = {
-        [privatePropertyName]: null,
-
-        // write the complete setter to make the assert below pass :)
+        set [publicPropertyName](data) { this._x = data }
       };
       obj.x = 'axe';
-      expect(obj._x).toEqual('axe')
+      expect(obj._x).toEqual(FILL_ME_IN)
     });
   });
 

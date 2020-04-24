@@ -4,12 +4,13 @@
 describe('Pass a function to a generator', () => {
   it('the generator can receive a function as a value', () => {
     let fn = function() {};
-    function* generatorFunction() {
-      expect(yield null).toEqual(fn); // remember, don't touch this line
+    function* generatorFunction(fn) {
+      const item = yield 1
+      return item
     }
     let iterator = generatorFunction();
     iterator.next();
-    iterator.next();
+    expect(iterator.next(fn).value).toEqual(FILL_ME_IN);
   });
 
   it('pass a function to the iterator, which calls it', function() {
@@ -17,16 +18,17 @@ describe('Pass a function to a generator', () => {
       yield (yield 1)();
     }
     var iterator = generatorFunction();
-    var iteratedOver = [iterator.next().value, iterator.next().value];
-    expect(iteratedOver).toEqual([1, 2])
+    var iteratedOver = [iterator.next().value, iterator.next(() => 2).value];
+    expect(iteratedOver).toEqual(FILL_ME_IN)
   });
 
   it('nesting yielded function calls', () => {
     function* generatorFunction() {
-      yield (yield (yield 1)());
+      yield (yield (yield 1)())();
     }
 
-    var iteratedOver = [];
-    expect(iteratedOver).toEqual([1, 2, 3])
+    var iterator = generatorFunction();
+    var iteratedOver = [iterator.next().value, iterator.next(() => 2).value, iterator.next(() => 3).value];
+    expect(iteratedOver).toEqual(FILL_ME_IN)
   });
 });
