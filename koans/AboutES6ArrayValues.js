@@ -1,40 +1,40 @@
-// 43: array - `Array.prototype.values`
+// 43: array - `Array.values`
 // To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
-describe('`Array.prototype.values` returns an iterator for all values in the array', () => {
+describe('`Array.values` returns an iterator for all values in the array', () => {
   it('`values()` returns an iterator', () => {
     const arr = ['k', 'e', 'y'];
     const iterator = arr.values();
 
-    expect(iterator.next()).toEqual({value: void 0, done: true})
+    expect(iterator.next().value).toEqual(FILL_ME_IN)
   });
 
   it('use `iterator.next()` to drop first value', () => {
     const arr = ['keys', 'values', 'entries'];
     const iterator = arr.values();
-    iterator.___();
+    iterator.next();
 
-    expect([...iterator]).toEqual(['values', 'entries'])
+    expect([...iterator]).toEqual([FILL_ME_IN])
   });
 
   it('empty array contains no values', () => {
-    const arr = [...[...[...[...'1']]]];
+    const arr = []
     const values = [...arr.values()];
 
-    expect(values.length).toEqual(0)
+    expect(values.length).toEqual(FILL_ME_IN)
   });
 
   it('a sparse array without real values has values though', () => {
-    const arr = [, 0];
+    const arr = [,];
     const keys = [...arr.values()];
 
-    expect(keys).toEqual([void 0, void 0])
+    expect(keys).toEqual([FILL_ME_IN])
   });
 
   it('also includes holes in sparse arrays', () => {
-    const arr = ['a',];
+    const arr = ['a',,'c'];
 
-    expect([...arr.values()]).toEqual(['a', void 0, 'c'])
+    expect([...arr.values()]).toEqual([FILL_ME_IN])
   });
 });
