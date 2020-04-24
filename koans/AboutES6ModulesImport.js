@@ -1,5 +1,4 @@
 // 61: modules - import
-// To do: make all tests pass, leave the expect lines unchanged!
 
 describe('use `import` to import functions that have been exported (somewhere else)', () => {
   describe('the import statement', () => {

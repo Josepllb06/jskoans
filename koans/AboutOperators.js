@@ -5,7 +5,7 @@ describe("About Operators", () => {
     for (var i = 0; i <= 5; i++) {
       result = result + i;
     }
-    expect(result).toBe(FILL_ME_IN).withContext('What is the value of result?');
+    expect(result).withContext('What is the value of result?').toEqual(FILL_ME_IN);
   });
 
   it("assignment addition", function() {
@@ -14,7 +14,7 @@ describe("About Operators", () => {
       //the code below is just like saying result = result + i; but is more concise
       result += i;
     }
-    expect(result).toBe(FILL_ME_IN).withContext('What is the value of result?');
+    expect(result).withContext('What is the value of result?').toEqual(FILL_ME_IN);
   });
 
   it("subtraction", function() {
@@ -22,7 +22,7 @@ describe("About Operators", () => {
     for (var i = 0; i <= 2; i++) {
       result = result - i;
     }
-    expect(result).toBe(FILL_ME_IN).withContext('What is the value of result?');
+    expect(result).withContext('What is the value of result?').toEqual(FILL_ME_IN);
   });
 
   it("assignment subtraction", function() {
@@ -30,7 +30,7 @@ describe("About Operators", () => {
     for (var i = 0; i <= 2; i++) {
       result -= i;
     }
-    expect(result).toBe(FILL_ME_IN).withContext('What is the value of result?');
+    expect(result).withContext('What is the value of result?').toEqual(FILL_ME_IN);
   });
 
   //Assignment operators are available for multiplication and division as well
@@ -41,6 +41,6 @@ describe("About Operators", () => {
     var x = 5;
     //again this is exactly the same as result = result % x
     result %= x;
-    expect(result).toBe(FILL_ME_IN).withContext('What is the value of result?');
+    expect(result).withContext('What is the value of result?').toEqual(FILL_ME_IN);
   });
 });

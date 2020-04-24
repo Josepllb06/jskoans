@@ -1,5 +1,4 @@
 // 52: Generator - Send value to a generator
-// To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
 describe('Pass a value to a generator', () => {
@@ -15,6 +14,7 @@ describe('Pass a value to a generator', () => {
     var iteratedOver = [iterator.next().___, iterator.___];
     expect(convertedToAnArray).toEqual(iteratedOver)
   });
+
   it('pass a value to the iterator', () => {
     function* generatorFunction() {
       yield 1;
@@ -22,17 +22,18 @@ describe('Pass a value to a generator', () => {
     }
     var iterator = generatorFunction();
     var iteratedOver = [iterator.next().value, iterator.next(2).value];
-    
+
     expect(iteratedOver).toEqual([1, 2])
   });
+
   it('a value passed to the 1st `next()` call is ignored', () => {
     function* generatorFunction() {
       yield 1;
-      
+
     }
     let iterator = generatorFunction();
     const values = [
-      iterator.next('irrelevant').value, 
+      iterator.next('irrelevant').value,
       iterator.next(2).value
     ];
     expect(values).toEqual([1, 2])

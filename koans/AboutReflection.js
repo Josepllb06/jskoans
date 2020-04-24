@@ -9,10 +9,10 @@ describe("About Reflection", () => {
   };
 
   it("typeof", function() {
-    expect(FILL_ME_IN).toBe(typeof({})).withContext('what is the type of an empty object?');
-    expect(FILL_ME_IN).toBe(typeof('apple')).withContext('what is the type of a string?');
-    expect(FILL_ME_IN).toBe(typeof(-5)).withContext('what is the type of -5?');
-    expect(FILL_ME_IN).toBe(typeof(false)).withContext('what is the type of false?');
+    expect(FILL_ME_IN).withContext('what is the type of an empty object?').toEqual(typeof({}));
+    expect(FILL_ME_IN).withContext('what is the type of a string?').toEqual(typeof('apple'));
+    expect(FILL_ME_IN).withContext('what is the type of -5?').toEqual(typeof(-5));
+    expect(FILL_ME_IN).withContext('what is the type of false?').toEqual(typeof(false));
   });
 
   it("property enumeration", function() {
@@ -23,8 +23,8 @@ describe("About Reflection", () => {
         keys.push(propertyName);
         values.push(person[propertyName]);
     }
-    expect(keys.equalTo(['FILL_ME_IN','FILL_ME_IN','FILL_ME_IN'])).toBeTruthy().withContext('what are the property names of the object?');
-    expect(values.equalTo(['FILL_ME_IN',FILL_ME_IN,FILL_ME_IN])).toBeTruthy().withContext('what are the property values of the object?');
+    expect(keys.equalTo(['FILL_ME_IN','FILL_ME_IN','FILL_ME_IN'])).withContext('what are the property names of the object?').toEqualTruthy();
+    expect(values.equalTo(['FILL_ME_IN',FILL_ME_IN,FILL_ME_IN])).withContext('what are the property values of the object?').toEqualTruthy();
   });
 
   it("hasOwnProperty", function() {
@@ -35,21 +35,22 @@ describe("About Reflection", () => {
     for (propertyName in b) {
         keys.push(propertyName);
     }
-    expect(FILL_ME_IN).toEqual(keys.length, 'how many elements are in the keys array?');
-    expect([FILL_ME_IN, FILL_ME_IN]).toEqual(keys).withContext('what are the properties of the array?');
+
+    expect(FILL_ME_IN).withContext('how many elements are in the keys array?').toEqual(keys.length);
+    expect([FILL_ME_IN, FILL_ME_IN]).withContext('what are the properties of the array?').toEqual(keys);
   });
 
   it("constructor property", function () {
     var a = new A();
-    expect(FILL_ME_IN).toBe(typeof(a.constructor)).withContext("what is the type of a's constructor?");
-    expect(FILL_ME_IN).toBe(a.constructor.name).withContext("what is the name of a's constructor?");
+    expect(FILL_ME_IN).withContext("what is the type of a's constructor?").toEqual(typeof(a.constructor));
+    expect(FILL_ME_IN).withContext("what is the name of a's constructor?").toEqual(a.constructor.name);
   });
 
   it("eval", function() {
     // eval executes a string
     var result = "";
     eval("result = 'apple' + ' ' + 'pie'");
-    expect(FILL_ME_IN).toBe(result).withContext('what is the value of result?');
+    expect(FILL_ME_IN).withContext('what is the value of result?').toEqual(result);
   });
 
 });

@@ -1,5 +1,4 @@
-// 56: 
-// To do: make all tests pass, leave the assert lines unchanged!
+// 56:
 // Follow the hints of the failure messages!
 
 describe('Pass a function to a generator', () => {
@@ -12,6 +11,7 @@ describe('Pass a function to a generator', () => {
     iterator.next();
     iterator.next();
   });
+
   it('pass a function to the iterator, which calls it', function() {
     function* generatorFunction() {
       yield (yield 1)();
@@ -20,11 +20,12 @@ describe('Pass a function to a generator', () => {
     var iteratedOver = [iterator.next().value, iterator.next().value];
     expect(iteratedOver).toEqual([1, 2])
   });
+
   it('nesting yielded function calls', () => {
     function* generatorFunction() {
       yield (yield (yield 1)());
     }
-    
+
     var iteratedOver = [];
     expect(iteratedOver).toEqual([1, 2, 3])
   });

@@ -5,7 +5,7 @@ describe("About Control Structures", () => {
     if (2 > 0) {
         isPositive = true;
     }
-    expect(FILL_ME_IN).toBe(isPositive).withContext('what is the value of isPositive?');
+    expect(FILL_ME_IN).withContext('what is the value of isPositive?').toEqual(isPositive);
   });
 
   it("for", function() {
@@ -13,7 +13,7 @@ describe("About Control Structures", () => {
     for (var i = 1; i <= 3; i++) {
         counter = counter + i;
     }
-    expect(FILL_ME_IN).toBe(counter).withContext('what is the value of counter?');
+    expect(FILL_ME_IN).withContext('what is the value of counter?').toEqual(counter);
   });
 
   it("for in", function() {
@@ -27,7 +27,7 @@ describe("About Control Structures", () => {
     for (var property_name in person) {
         result = result + property_name;
     }
-    expect(FILL_ME_IN).toBe(result).withContext('what is the value of result?');
+    expect(FILL_ME_IN).withContext('what is the value of result?').toEqual(result);
   });
 
   it("for of", function() {
@@ -41,15 +41,15 @@ describe("About Control Structures", () => {
     for (var value of person) {
         result = result + value;
     }
-    expect(FILL_ME_IN).toBe(result).withContext('what is the value of result?');
+    expect(FILL_ME_IN).withContext('what is the value of result?').toEqual(result);
   });
 
   it("ternary operator", function() {
     var fruit = true ? "apple" : "orange";
-    expect(FILL_ME_IN).toBe(fruit).withContext('what is the value of fruit?');
+    expect(FILL_ME_IN).withContext('what is the value of fruit?').toEqual(fruit);
 
     fruit = false ? "apple" : "orange";
-    expect(FILL_ME_IN).toBe(fruit).withContext('now what is the value of fruit?');
+    expect(FILL_ME_IN).withContext('now what is the value of fruit?').toEqual(fruit);
   });
 
   it("switch", function() {
@@ -62,7 +62,7 @@ describe("About Control Structures", () => {
             result = 2;
             break;
     }
-    expect(FILL_ME_IN).toBe(result).withContext('what is the value of result?');
+    expect(FILL_ME_IN).withContext('what is the value of result?').toEqual(result);
   });
 
   it("switch default case", function() {
@@ -78,12 +78,12 @@ describe("About Control Structures", () => {
             result = "Merry";
             break;
     }
-    expect(FILL_ME_IN).toBe(result).withContext('what is the value of result?');
+    expect(FILL_ME_IN).withContext('what is the value of result?').toEqual(result);
   });
 
   it("null coalescing", function() {
     var result = null || "a value";
-    expect(FILL_ME_IN).toBe(result).withContext('what is the value of result?');
+    expect(FILL_ME_IN).withContext('what is the value of result?').toEqual(result);
   });
 
 });

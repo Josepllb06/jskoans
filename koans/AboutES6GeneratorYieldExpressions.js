@@ -1,5 +1,4 @@
 // 51: Generator - Yield Expressions
-// To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
 describe('Generator - `yield` is used to pause and resume a generator function', () => {
@@ -32,7 +31,7 @@ describe('Generator - `yield` is used to pause and resume a generator function',
   describe('after the second `next()` call', () => {
     let secondItem;
     beforeEach(() => {
-      
+
       secondItem = generator.next();
     });
 
@@ -40,11 +39,13 @@ describe('Generator - `yield` is used to pause and resume a generator function',
       let {value} = secondItem;
       expect(value).toEqual('world')
     });
+
     it('and `done` is still false', () => {
       const done = secondItem;
       expect(done).toEqual(false)
     });
   });
+
   describe('after stepping past the last element, calling `next()` that often', () => {
     it('`done` property equals true, since there is nothing more to iterator over', () => {
       generator.next();

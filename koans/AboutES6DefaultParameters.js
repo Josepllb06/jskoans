@@ -1,5 +1,4 @@
 // 57: Default parameters - basics
-// To do: make all tests pass, leave the assert lines unchanged!
 // Follow the hints of the failure messages!
 
 describe('Default parameters make function parameters more flexible', () => {
@@ -16,7 +15,7 @@ describe('Default parameters make function parameters more flexible', () => {
 
   it('it is not used when a value is given', () => {
     function xhr() {
-      return method;  
+      return method;
     }
     expect(xhr('POST')).toEqual('POST')
   });
@@ -24,7 +23,7 @@ describe('Default parameters make function parameters more flexible', () => {
   it('it is evaluated at run time', () => {
     let defaultValue;
     function xhr(method = `value: ${defaultValue}`) {
-      return method;  
+      return method;
     }
     expect(xhr()).toEqual('value: 42')
   });
@@ -32,7 +31,7 @@ describe('Default parameters make function parameters more flexible', () => {
   it('it can also be a function', () => {
     const defaultValue = 0;
     function fn(value = defaultValue()) {
-      return value;  
+      return value;
     }
     expect(fn()).toEqual('defaultValue')
   });

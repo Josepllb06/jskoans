@@ -1,7 +1,7 @@
 describe("About Objects", function () {
   it("object type", function() {
     var empty_object = {};
-    expect(FILL_ME_IN).toBe(typeof(empty_object)).withContext('what is the type of an object?');
+    expect(FILL_ME_IN).withContext('what is the type of an object?').toEqual(typeof(empty_object));
   });
 
   describe("Properties", function () {
@@ -12,12 +12,12 @@ describe("About Objects", function () {
     });
 
     it("should confirm objects are collections of properties", function () {
-      expect(megalomaniac.mastermind).toBe(FILL_ME_IN);
+      expect(megalomaniac.mastermind).toEqual(FILL_ME_IN);
     });
 
     it("should confirm that properties are case sensitive", function () {
-      expect(megalomaniac.henchwoman).toBe(FILL_ME_IN);
-      expect(megalomaniac.henchWoman).toBe(FILL_ME_IN);
+      expect(megalomaniac.henchwoman).toEqual(FILL_ME_IN);
+      expect(megalomaniac.henchWoman).toEqual(FILL_ME_IN);
     });
 
     it("dynamically adding properties", function() {
@@ -25,8 +25,8 @@ describe("About Objects", function () {
       person.__ = "Amory Blaine";
       person.__ = 102;
 
-      expect("Amory Blaine").toBe(person.name).withContext("what is the person's name?");
-      expect(102).toBe(person.age).withContext("what is the person's age?");
+      expect("Amory Blaine").withContext("what is the person's name?").toEqual(person.name);
+      expect(102).withContext("what is the person's age?").toEqual(person.age);
     });
 
     it("adding properties from strings", function() {
@@ -34,11 +34,10 @@ describe("About Objects", function () {
       person["__"] = "Amory Blaine";
       person["__"] = 102;
 
-      expect("Amory Blaine").toBe(person.name).withContext("what is the person's name?");
-      expect(102).toBe(person.age).withContext("what is the person's age?");
+      expect("Amory Blaine").withContext("what is the person's name?").toEqual(person.name);
+      expect(102).withContext("what is the person's age?").toEqual(person.age);
     });
   });
-
 
   it("should know properties that are functions act like methods", function () {
     var megalomaniac = {
@@ -66,8 +65,8 @@ describe("About Objects", function () {
       }
     };
 
-    expect(currentYear).toBe(FILL_ME_IN);
-    expect(megalomaniac.calculateAge()).toBe(FILL_ME_IN);
+    expect(currentYear).toEqual(FILL_ME_IN);
+    expect(megalomaniac.calculateAge()).toEqual(FILL_ME_IN);
   });
 
   describe("'in' keyword", function () {
@@ -84,26 +83,26 @@ describe("About Objects", function () {
 
       var hasBomb = "theBomb" in megalomaniac;
 
-      expect(hasBomb).toBe(FILL_ME_IN);
+      expect(hasBomb).toEqual(FILL_ME_IN);
     });
 
     it("should not have the detonator however", function () {
 
       var hasDetonator = "theDetonator" in megalomaniac;
 
-      expect(hasDetonator).toBe(FILL_ME_IN);
+      expect(hasDetonator).toEqual(FILL_ME_IN);
     });
   });
 
   it("should know that properties can be added and deleted", function () {
     var megalomaniac = { mastermind : "Agent Smith", henchman: "Agent Smith" };
 
-    expect("secretary" in megalomaniac).toBe(FILL_ME_IN);
+    expect("secretary" in megalomaniac).toEqual(FILL_ME_IN);
 
     megalomaniac.secretary = "Agent Smith";
-    expect("secretary" in megalomaniac).toBe(FILL_ME_IN);
+    expect("secretary" in megalomaniac).toEqual(FILL_ME_IN);
 
     delete megalomaniac.henchman;
-    expect("henchman" in megalomaniac).toBe(FILL_ME_IN);
+    expect("henchman" in megalomaniac).toEqual(FILL_ME_IN);
   });
 });
