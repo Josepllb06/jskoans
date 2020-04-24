@@ -17,28 +17,20 @@ describe("About Control Structures", () => {
   });
 
   it("for in", function() {
-    // this syntax will be explained in about objects
-    var person = {
-        name: "Amory Blaine",
-        age: 102
-    };
-    var result = "";
-    // for in enumerates the property names of an object
+    var person = [ "Amory Blaine", 102 ];
+    var result = '';
+    // for in loops through the keys of an iterable.
     for (var property_name in person) {
-        result = result + property_name;
+        result += property_name;
     }
     expect(FILL_ME_IN).withContext('what is the value of result?').toEqual(result);
   });
 
   it("for of", function() {
-    // this syntax will be explained in about objects
-    var person = {
-        number: 3,
-        age: 102
-    };
+    const items = [ 3, 102 ];
     var result = 0;
-    // for in enumerates the property values of an object
-    for (var value of person) {
+    // for of loops through the values of an iterable
+    for (var value of items) {
         result = result + value;
     }
     expect(FILL_ME_IN).withContext('what is the value of result?').toEqual(result);
