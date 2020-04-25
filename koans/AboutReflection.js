@@ -24,7 +24,7 @@ describe("About Reflection", () => {
         values.push(person[propertyName]);
     }
     expect(keys).withContext('what are the property names of the object?').toEqual(['FILL_ME_IN','FILL_ME_IN','FILL_ME_IN']);
-    expect(values).withContext('what are the property values of the object?').equalTo(['FILL_ME_IN',FILL_ME_IN,FILL_ME_IN]);
+    expect(values).withContext('what are the property values of the object?').toEqual(['FILL_ME_IN',FILL_ME_IN,FILL_ME_IN]);
   });
 
   it("hasOwnProperty", function() {
