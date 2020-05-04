@@ -2,7 +2,7 @@ describe("About this", () => {
     it("'this' inside a method", () => {
         var person = {
             name: 'bob',
-            intro: () => {
+            intro: function() {
                 return "Hello, my name is " + this.__;
             }
         }
@@ -12,7 +12,7 @@ describe("About this", () => {
     it("'this' on unattached function", () => {
         var person = {
             globalName: 'bob',
-            intro: () => {
+            intro: function() {
                 return "Hello, my name is " + this.globalName;
             }
         }
@@ -28,7 +28,7 @@ describe("About this", () => {
     it("'this' set explicitly", () => {
         var person = {
             name: 'bob',
-            intro: () => {
+            intro: function() {
                 return "Hello, my name is " + this.name;
             }
         }
