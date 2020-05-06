@@ -40,7 +40,7 @@ describe('tagged template strings, are an advanced form of template strings', fu
       var three = 3;
 
       it('the 2nd parameter contains the first expression`s value', function() {
-        function firstValueOnly(strings, first_value) {
+        function firstValueOnly(strings, firstValue) {
           return firstValue;
         }
         expect(firstValueOnly`uno ${one}, dos ${two}`).toEqual(FILL_ME_IN);
