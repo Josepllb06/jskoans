@@ -3,7 +3,9 @@ describe("About Regular Expressions", () => {
     it("exec", () => {
         var numberFinder = /(\d).*(\d)/;
         var results = numberFinder.exec("what if 6 turned out to be 9?");
-        expect(results).withContext('what is the value of results?').toEqual([FILL_ME_IN, FILL_ME_IN, FILL_ME_IN]);
+        expect(results[0]).withContext('what is the value of results?').toEqual(FILL_ME_IN);
+        expect(results[1]).withContext('what is the value of results?').toEqual(FILL_ME_IN);
+        expect(results[2]).withContext('what is the value of results?').toEqual(FILL_ME_IN);
     });
 
     it("test", () => {
