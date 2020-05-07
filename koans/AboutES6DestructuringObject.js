@@ -19,8 +19,8 @@ describe('Destructure objects', () => {
     });
 
     it('array and object', () => {
-      const [,[{lang}]] = [null, [{env: 'browser', lang: 'ES6'}]];
-      expect(lang).toEqual('ES6');
+      const [,[{FILL_ME_IN}]] = [null, [{env: 'browser', lang: 'ES6'}]];
+      expect(FILL_ME_IN).toEqual('ES6');
     });
   });
 
