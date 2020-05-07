@@ -11,25 +11,25 @@ describe('spread with strings', () => {
   it('extracts each array item', function() {
     const [a,b,c] = ['a', ...'12'];
 
-    expect(FILL_ME_IN, 1);
-    expect(FILL_ME_IN, 2);
+    expect(FILL_ME_IN).toEqual(1);
+    expect(FILL_ME_IN.toEqual(2);
   });
 
   it('works anywhere inside an array (must not be last)', function() {
     const letters = ['a', ...'bcd', 'e', 'f'];
 
-    expect(letters.length, FILL_ME_IN);
+    expect(letters.length).toEqual(FILL_ME_IN);
   });
 
   it('dont confuse with the rest operator', function() {
     const [...rest] = [...'1234', ...'5'];
 
-    expect(rest, FILL_ME_IN);
+    expect(rest).toEqual(FILL_ME_IN);
   });
 
   it('passed as function parameter', function() {
-    const max = Math.max(...12345);
-    expect(max, FILL_ME_IN);
+    const max = Math.max(...'12345');
+    expect(max).toEqual(FILL_ME_IN);
   });
 
 });
