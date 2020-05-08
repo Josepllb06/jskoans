@@ -14,12 +14,6 @@ describe('Classes can inherit from another using `extends`', () => {
       expect(new A() instanceof FILL_ME_IN).toBeTruthy();
       expect(new B() instanceof FILL_ME_IN).toBeTruthy();
     });
-
-    it('a class can extend `null`, and is not an instance of Object', () => {
-      class NullClass extends null {}
-      let nullInstance = new NullClass();
-      expect(nullInstance instanceof Object).toEqual(FILL_ME_IN);
-    });
   });
 
   describe('instance of', () => {
