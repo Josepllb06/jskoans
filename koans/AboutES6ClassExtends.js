@@ -4,14 +4,14 @@
 describe('Classes can inherit from another using `extends`', () => {
   describe('the default super class is `Object`', () => {
     it('a `class A` is an instance of `Object`', () => {
-      let A
+      class A {}
       expect(new A() instanceof FILL_ME_IN).toBeTruthy();
     });
 
     it('when B extends A, B is also instance of `Object`', () => {
       class A {}
       class B extends A {}
-      expect(new B() instanceof FILL_ME_IN).toBeTruthy();
+      expect(new A() instanceof FILL_ME_IN).toBeTruthy();
       expect(new B() instanceof FILL_ME_IN).toBeTruthy();
     });
 
@@ -24,7 +24,7 @@ describe('Classes can inherit from another using `extends`', () => {
 
   describe('instance of', () => {
     it('when B inherits from A, `new B()` is also an instance of A', () => {
-      let A;
+      class A {}
       class B extends A {}
       expect(new B() instanceof FILL_ME_IN).toBeTruthy();
     });
