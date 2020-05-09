@@ -16,8 +16,8 @@ describe('Inside a class`s constructor `super()` can be used', () => {
   it('`super()` may also take params', () => {
     class A {constructor(startValue=1, addTo=1) { this.counter = startValue + addTo; }}
     class B extends A {
-      constructor(...args) {
-        super(args);
+      constructor(startValue, addTo) {
+        super(startValue, addTo);
         this.counter++;
       }
     }
