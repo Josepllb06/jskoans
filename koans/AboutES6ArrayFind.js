@@ -16,9 +16,9 @@ describe('`Array.prototype.find` makes finding items in arrays easier', () => {
   });
 
   it('returns `undefined` when nothing was found', function() {
-    const found = [1, 2, 3].find(item => item === FILL_ME_IN);
+    const found = [1, 2, 3].find(item => item === 4);
 
-    expect(found).toEqual(void 0);
+    expect(found).toEqual(FILL_ME_IN);
   });
 
   it('combined with destructuring complex compares become short', function() {
