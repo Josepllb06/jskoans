@@ -32,6 +32,6 @@ describe('`Array.prototype.findIndex` makes finding items in arrays easier', () 
     const alice = {name: 'Alice'};
     const foundAt = [bob, alice].findIndex(({name:{length}}) => length > 3);
 
-    expect(foundA).toEqual(FILL_ME_IN);
+    expect(foundAt).toEqual(FILL_ME_IN);
   });
 });
