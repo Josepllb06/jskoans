@@ -20,7 +20,7 @@ describe('`str.repeat(x)` appends `x` copies of `str` to each other and returns 
     });
 
     it('the count is not an int, such as "3", it gets coerced to an int', () => {
-      const repeated = ''.repeat('FILL_ME_IN');
+      const repeated = 'three'.repeat('FILL_ME_IN');
       expect(repeated).toEqual('threethreethree')
     });
   });
@@ -44,7 +44,7 @@ describe('`str.repeat(x)` appends `x` copies of `str` to each other and returns 
     });
 
     it('e.g. a number', () => {
-      let aNumber;
+      let aNumber = 1;
       expect(String.prototype.repeat.call(aNumber, 2)).toEqual(FILL_ME_IN)
     });
   });
