@@ -2,7 +2,7 @@
 // Follow the hints of the failure messages!
 
 describe('`return` in a generator function is special', () => {
-  xdescribe('the returned value is an IteratorResult (just like any value returned via `yield`)', () => {
+  describe('the returned value is an IteratorResult (just like any value returned via `yield`)', () => {
     it('returns an IteratorResult (an object with the properties `value` and `done`)', () => {
       function* generatorFunction() { return 1; }
       const returned = generatorFunction().next();
@@ -41,7 +41,7 @@ describe('`return` in a generator function is special', () => {
       return 2
     }
 
-    xit('is possible', () => {
+    it('is possible', () => {
       const iterator = generatorFunctionWithYieldAndReturn();
       const values = [
         iterator.next(),
@@ -50,13 +50,13 @@ describe('`return` in a generator function is special', () => {
       expect(values).toEqual([{value: 1, done: false}, FILL_ME_IN])
     });
 
-    xit('the mix behaves different to two `yield`s', () => {
+    it('the mix behaves different to two `yield`s', () => {
       const iterator = generatorFunctionWithYieldAndReturn();
       const values = FILL_ME_IN;
       expect(Array.from(iterator)).toEqual(values)
     });
 
-    xit('two `yield`s returning values', () => {
+    it('two `yield`s returning values', () => {
       function* generatorFunctionWithTwoYields() {
         yield 1;
         yield 2;
