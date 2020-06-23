@@ -24,10 +24,10 @@ describe('Generators returns an iterable object', () => {
 
   it('can be looped with `for-of`, which expects an iterable', () => {
     function iterateForOf(){
-      for (let value of {}) {
-        // no statements needed
+      for (let value of generatorFunction()) {
+        expect([1,2]).toContain(FILL_ME_IN)
       }
     }
-    expect(CHANGE_ME).toThrowError()
+    iterateForOf()
   });
 });
