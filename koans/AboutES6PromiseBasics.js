@@ -11,8 +11,13 @@ describe('a Promise represents an operation that hasn`t completed yet, but is ex
   describe('the constructor', function() {
 
     it('instantiating it without params throws', function() {
-      const fn = () => { CHANGE_ME() }
-      expect(fn()).toThrowError();
+      try {
+        CHANGE_ME()
+        fail()
+      }
+      catch(e) {
+        expect().nothing()
+      }
     });
 
     it('expects a function as parameter', function() {
