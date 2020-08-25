@@ -77,7 +77,7 @@ describe('`string.includes()` finds string within another string', () => {
 
       describe('invalid positions get converted to 0', () => {
         it('e.g. `undefined`', () => {
-          const findAtPosition = (pos=2) => 'xyz'.includes('x', pos);
+          const findAtPosition = (pos) => 'xyz'.includes('x', pos);
           expect(findAtPosition(undefined)).toEqual(FILL_ME_IN)
         });
 
