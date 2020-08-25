@@ -14,7 +14,7 @@ describe('Use the `raw` property of tagged template strings like so `s.raw`', fu
       var lineBreak = strings.raw;
       return lineBreak;
     }
-    expect(firstCharEntered`\n`, FILL_ME_IN);
+    expect(firstCharEntered`\n`).toEqual(FILL_ME_IN);
   });
 
   describe('`String.raw` as a static function', function(){
