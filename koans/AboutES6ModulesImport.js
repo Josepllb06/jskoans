@@ -37,7 +37,7 @@ describe('use `import` to import functions that have been exported (somewhere el
     it('using `member as alias` as memberName', () => {
       // You can "change" the name of the functions imported adding an alias:
       // import { singleFunction as anotherName } from 'lib/sample'
-      // Now uncomment the next line to move to the next koan:
+      // Now comment the next line to move to the next koan:
       fail()
     });
   });
