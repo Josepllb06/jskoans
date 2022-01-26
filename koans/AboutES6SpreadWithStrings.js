@@ -11,8 +11,8 @@ describe('spread with strings', () => {
   it('extracts each array item', function() {
     const [a,b,c] = ['a', ...'12'];
 
-    expect(FILL_ME_IN).toEqual(1);
-    expect(FILL_ME_IN).toEqual(2);
+    expect(FILL_ME_IN).toEqual('1');
+    expect(FILL_ME_IN).toEqual('2');
   });
 
   it('works anywhere inside an array (must not be last)', function() {
