@@ -3,23 +3,23 @@
 
 describe('spread with arrays', () => {
 
-  it('extracts each array item', function() {
+  it('extracts each array item', () => {  
     const [a, b] = [...[1, 2]];
     expect(FILL_ME_IN).toEqual(2);
   });
 
-  it('in combination with rest', function() {
+  it('in combination with rest', () => {  
     const [a, b, ...rest] = [...[0, 1, 2, 3, 4, 5]];
     expect(FILL_ME_IN, [2, 3, 4, 5]);
   });
 
-  it('spreading into the rest', function() {
+  it('spreading into the rest', () => {  
     const [...rest] = [...[1, 2, 3, 4, 5]];
     expect(FILL_ME_IN).toEqual([1, 2, 3, 4, 5]);
   });
 
   describe('used as function parameter', () => {
-    it('prefix with `...` to spread as function params', function() {
+    it('prefix with `...` to spread as function params', () => {  
       const magicNumbers = [1, 2];
 
       const fn = (magicA, magicB) => {
@@ -30,7 +30,7 @@ describe('spread with arrays', () => {
       fn(...FILL_ME_IN);
     });
 
-    it('pass an array of numbers to Math.max()', function() {
+    it('pass an array of numbers to Math.max()', () => {  
       const max = Math.max(...[23, 0, 42]);
 
       expect(max).toEqual(FILL_ME_IN);

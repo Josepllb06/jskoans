@@ -3,25 +3,25 @@
 
 describe('`Array.prototype.find` makes finding items in arrays easier', () => {
 
-  it('takes a compare function', function() {
+  it('takes a compare function', () => {  
     const found = [true].find(item => item === FILL_ME_IN);
 
     expect(found).toEqual(true);
   });
 
-  it('returns the first value found', function() {
+  it('returns the first value found', () => {  
     const found = [0, 1, 2].find(item => item > 1);
 
     expect(found).toEqual(FILL_ME_IN);
   });
 
-  it('returns `undefined` when nothing was found', function() {
+  it('returns `undefined` when nothing was found', () => {  
     const found = [1, 2, 3].find(item => item === 4);
 
     expect(found).toEqual(FILL_ME_IN);
   });
 
-  it('combined with destructuring complex compares become short', function() {
+  it('combined with destructuring complex compares become short', () => {  
     const bob = {name: 'Bob'};
     const alice = {name: 'Alice'};
     const found = [bob, alice].find(({name}) => name === FILL_ME_IN);

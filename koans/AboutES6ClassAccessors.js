@@ -22,7 +22,7 @@ describe('Class accessors (getter and setter)', () => {
   });
 
   describe('dynamic accessors', () => {
-    it('a dynamic getter name is enclosed in `[]`', function() {
+    it('a dynamic getter name is enclosed in `[]`', () => {  
       const balance = FILL_ME_IN;
       class YourAccount {
         get [balance]() { return -Infinity; }
@@ -30,7 +30,7 @@ describe('Class accessors (getter and setter)', () => {
       expect(new YourAccount().yourMoney).toEqual(-Infinity);
     });
 
-    it('a dynamic setter name as well', function() {
+    it('a dynamic setter name as well', () => {  
       const propertyName = FILL_ME_IN;
       class MyAccount {
         get [propertyName]() { return this.amount; }

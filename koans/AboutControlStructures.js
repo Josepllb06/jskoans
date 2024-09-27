@@ -1,6 +1,6 @@
 describe("About Control Structures", () => {
 
-  it("if", function() {
+  it("if", () => {
     var isPositive = false;
     if (2 > 0) {
         isPositive = true;
@@ -8,7 +8,7 @@ describe("About Control Structures", () => {
     expect(FILL_ME_IN).withContext('what is the value of isPositive?').toEqual(isPositive);
   });
 
-  it("for", function() {
+  it("for", () => {
     var counter = 10;
     for (var i = 1; i <= 3; i++) {
         counter = counter + i;
@@ -16,7 +16,7 @@ describe("About Control Structures", () => {
     expect(FILL_ME_IN).withContext('what is the value of counter?').toEqual(counter);
   });
 
-  it("for in", function() {
+  it("for in", () => {
     var person = [ "Amory Blaine", 102 ];
     var result = '';
     // for in loops through the keys of an iterable.
@@ -26,7 +26,7 @@ describe("About Control Structures", () => {
     expect(FILL_ME_IN).withContext('what is the value of result?').toEqual(result);
   });
 
-  it("for of", function() {
+  it("for of", () => {
     const items = [ 3, 102 ];
     var result = 0;
     // for of loops through the values of an iterable
@@ -36,7 +36,7 @@ describe("About Control Structures", () => {
     expect(FILL_ME_IN).withContext('what is the value of result?').toEqual(result);
   });
 
-  it("ternary operator", function() {
+  it("ternary operator", () => {
     var fruit = true ? "apple" : "orange";
     expect(FILL_ME_IN).withContext('what is the value of fruit?').toEqual(fruit);
 
@@ -44,7 +44,7 @@ describe("About Control Structures", () => {
     expect(FILL_ME_IN).withContext('now what is the value of fruit?').toEqual(fruit);
   });
 
-  it("switch", function() {
+  it("switch", () => {
     var result = 0;
     switch (2) {
         case 1:
@@ -57,7 +57,7 @@ describe("About Control Structures", () => {
     expect(FILL_ME_IN).withContext('what is the value of result?').toEqual(result);
   });
 
-  it("switch default case", function() {
+  it("switch default case", () => {
     var result = "Pippin";
     switch ("m") {
         case "f":
@@ -73,7 +73,7 @@ describe("About Control Structures", () => {
     expect(FILL_ME_IN).withContext('what is the value of result?').toEqual(result);
   });
 
-  it("null coalescing", function() {
+  it("null coalescing", () => {
     var result = null || "a value";
     expect(FILL_ME_IN).withContext('what is the value of result?').toEqual(result);
   });

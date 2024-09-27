@@ -1,8 +1,8 @@
-describe("About Applying What We Have Learnt", function() {
+describe("About Applying What We Have Learnt", () => {
 
   var products;
 
-  beforeEach(function () {
+  beforeEach(() => {
     products = [
        { name: "Sonoma", ingredients: ["artichoke", "sundried tomatoes", "mushrooms"], containsNuts: false },
        { name: "Pizza Primavera", ingredients: ["roma", "sundried tomatoes", "goats cheese", "rosemary"], containsNuts: false },
@@ -14,7 +14,7 @@ describe("About Applying What We Have Learnt", function() {
 
   /*********************************************************************************/
 
-  it("given I'm allergic to nuts and hate mushrooms, it should find a pizza I can eat (imperative)", function () {
+  it("given I'm allergic to nuts and hate mushrooms, it should find a pizza I can eat (imperative)", () => {
 
     var i,j,hasMushrooms, productsICanEat = [];
 
@@ -33,7 +33,7 @@ describe("About Applying What We Have Learnt", function() {
     expect(productsICanEat.length).toEqual(FILL_ME_IN);
   });
 
-  it("given I'm allergic to nuts and hate mushrooms, it should find a pizza I can eat (functional)", function () {
+  it("given I'm allergic to nuts and hate mushrooms, it should find a pizza I can eat (functional)", () => {
 
       var productsICanEat = [];
 
@@ -44,7 +44,7 @@ describe("About Applying What We Have Learnt", function() {
 
   /*********************************************************************************/
 
-  it("should add all the natural numbers below 1000 that are multiples of 3 or 5 (imperative)", function () {
+  it("should add all the natural numbers below 1000 that are multiples of 3 or 5 (imperative)", () => {
 
     var sum = 0;
     for(var i=1; i<1000; i+=1) {
@@ -56,7 +56,7 @@ describe("About Applying What We Have Learnt", function() {
     expect(sum).toEqual(FILL_ME_IN);
   });
 
-  it("should add all the natural numbers below 1000 that are multiples of 3 or 5 (functional)", function () {
+  it("should add all the natural numbers below 1000 that are multiples of 3 or 5 (functional)", () => {
 
     var sum = FILL_ME_IN;    /* try chaining range() and reduce() */
 
@@ -64,7 +64,7 @@ describe("About Applying What We Have Learnt", function() {
   });
 
   /*********************************************************************************/
-   it("should count the ingredient occurrence (imperative)", function () {
+   it("should count the ingredient occurrence (imperative)", () => {
     var ingredientCount = { "{ingredient name}": 0 };
 
     for (i = 0; i < products.length; i+=1) {
@@ -76,7 +76,7 @@ describe("About Applying What We Have Learnt", function() {
     expect(ingredientCount['mushrooms']).toEqual(FILL_ME_IN);
   });
 
-  it("should count the ingredient occurrence (functional)", function () {
+  it("should count the ingredient occurrence (functional)", () => {
     var ingredientCount = { "{ingredient name}": 0 };
 
     /* chain() together map(), flatten() and reduce() */
@@ -87,24 +87,24 @@ describe("About Applying What We Have Learnt", function() {
   /*********************************************************************************/
   /* UNCOMMENT FOR EXTRA CREDIT */
   /*
-  it("should find the largest prime factor of a composite number", function () {
+  it("should find the largest prime factor of a composite number", () => {
 
   });
 
-  it("should find the largest palindrome made from the product of two 3 digit numbers", function () {
+  it("should find the largest palindrome made from the product of two 3 digit numbers", () => {
 
   });
 
-  it("should find the smallest number divisible by each of the numbers 1 to 20", function () {
+  it("should find the smallest number divisible by each of the numbers 1 to 20", () => {
 
 
   });
 
-  it("should find the difference between the sum of the squares and the square of the sums", function () {
+  it("should find the difference between the sum of the squares and the square of the sums", () => {
 
   });
 
-  it("should find the 10001st prime", function () {
+  it("should find the 10001st prime", () => {
 
   });
   */

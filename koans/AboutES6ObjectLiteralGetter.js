@@ -37,7 +37,7 @@ describe('An object literal can also contain getters', () => {
   // but should be correct, as stated here https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/s/ =>get
   // It might be corrected later, new knowledge welcome.
 
-  //it('must not overlap with a pure property', function() {
+  //it('must not overlap with a pure property', () => {  
   //  const obj = {
   //    x: 1,
   //    get x() { return 'ax'; }
@@ -46,7 +46,7 @@ describe('An object literal can also contain getters', () => {
   //  assert.equal(obj.x, 'ax');
   //});
   //
-  //it('multiple `get` for the same property are not allowed', function() {
+  //it('multiple `get` for the same property are not allowed', () => {  
   //  const obj = {
   //    x: 1,
   //    get x() { return 'ax'; },

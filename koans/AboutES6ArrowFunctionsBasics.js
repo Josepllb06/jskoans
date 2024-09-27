@@ -1,13 +1,13 @@
 // 5: arrow functions - basics
 // Follow the hints of the failure messages!
 
-describe('Arrow functions', function() {
-  it('are shorter to write, instead of `function(){}` write `() => {}`', function() {
+describe('Arrow functions', () => {  
+  it('are shorter to write, instead of `function(){}` write `() => {}`', () => {  
     var func = () => {};
     expect('' + func).toEqual(FILL_ME_IN);
   });
 
-  it('instead `{}` use an expression, as return value', function() {
+  it('instead `{}` use an expression, as return value', () => {  
     var func = () => FILL_ME_IN;
     expect(func()).toEqual('I return too');
   });

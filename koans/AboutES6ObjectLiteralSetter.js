@@ -51,14 +51,14 @@ describe('An object literal can also contain setters', () => {
   // The following dont seem to work in the current transpiler version
   // but should be correct, as stated here https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set
   // It might be corrected later, new knowledge welcome.
-  // it('must not overlap with a pure property', function() {
+  // it('must not overlap with a pure property', () => {  
   //   const obj = {
   //     x: 1,
   //     set x(val) { return 'ax'; }
   //   };
   //   assert.equal(obj.x, 'ax');
   // });
-  // it('multiple `set` for the same property are not allowed', function() {
+  // it('multiple `set` for the same property are not allowed', () => {  
   //   const obj = {
   //     x: 1,
   //     set x(v) { return 'ax'; },

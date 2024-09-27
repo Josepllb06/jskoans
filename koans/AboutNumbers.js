@@ -1,6 +1,6 @@
 describe("About Numbers", () => {
 
-  it("types", function() {
+  it("types", () => {
     var typeOfIntegers = typeof(6);
     var typeOfFloats = typeof(3.14159);
 
@@ -9,7 +9,7 @@ describe("About Numbers", () => {
     expect(FILL_ME_IN).withContext('what is a integer number equivalent to 1.0?').toEqual(1.0);
   });
 
-  it("NaN", function() {
+  it("NaN", () => {
     var resultOfFailedOperations = 7/'apple';
     expect(FILL_ME_IN).withContext('what will satisfy the equals assertion?').toEqual(isNaN(resultOfFailedOperations));
     expect(FILL_ME_IN).withContext('is NaN == NaN?').toEqual(resultOfFailedOperations == NaN);

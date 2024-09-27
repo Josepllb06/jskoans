@@ -1,7 +1,7 @@
 // 78: Promise - API overview
 // Follow the hints of the failure messages!
 
-describe('`Promise` API overview', function() {
+describe('`Promise` API overview', () => {  
 
   it('`new Promise()` requires a function as param', () => {
     const param = FILL_ME_IN;

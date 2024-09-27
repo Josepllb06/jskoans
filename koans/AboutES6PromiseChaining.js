@@ -3,9 +3,9 @@
 
 describe('chaining multiple promises can enhance readability', () => {
 
-  describe('prerequisites for understanding', function() {
+  describe('prerequisites for understanding', () => {  
 
-    it('reminder: the test passes when a fulfilled promise is returned', function(done) {
+    it('reminder: the test passes when a fulfilled promise is returned', (done) => {  
       const promise = Promise.resolve(FILL_ME_IN)
 
       promise
@@ -13,7 +13,7 @@ describe('chaining multiple promises can enhance readability', () => {
         .catch(e => fail());
     });
 
-    it('a function given to `then()` fulfills (if it doesn\'t throw)', function() {
+    it('a function given to `then()` fulfills (if it doesn\'t throw)', () => {  
       const beNice = () => FILL_ME_IN;
       return Promise.resolve()
         .then(beNice)
@@ -22,11 +22,11 @@ describe('chaining multiple promises can enhance readability', () => {
 
   });
 
-  describe('chain promises', function() {
+  describe('chain promises', () => {  
 
     const removeMultipleSpaces = string => string.replace(/\s+/g, ' ');
 
-    it('`then()` receives the result of the promise it was called on', function() {
+    it('`then()` receives the result of the promise it was called on', () => {  
       const wordsPromise = Promise.resolve('one   space     between each     word');
       return wordsPromise
         .then(string => CHANGE_ME(string))
@@ -36,7 +36,7 @@ describe('chaining multiple promises can enhance readability', () => {
 
     const appendPeriod = string => `${string}.`;
 
-    it('multiple `then()`s can be chained', function() {
+    it('multiple `then()`s can be chained', () => {  
       const wordsPromise = Promise.resolve('Sentence without       an end');
       return wordsPromise
         .then(CHANGE_ME)
@@ -47,7 +47,7 @@ describe('chaining multiple promises can enhance readability', () => {
 
     const trim = string => string.replace(/^\s+/, '').replace(/\s+$/, '');
 
-    it('order of the `then()`s matters', function() {
+    it('order of the `then()`s matters', () => {  
       const wordsPromise = Promise.resolve('Sentence without       an end ');
       return wordsPromise
         // CHANGE THE ORDER
@@ -64,7 +64,7 @@ describe('chaining multiple promises can enhance readability', () => {
       setTimeout(format, 100);
     };
 
-    it('any of the things given to `then()` can resolve asynchronously (the real power of Promises)', function() {
+    it('any of the things given to `then()` can resolve asynchronously (the real power of Promises)', () => {  
       const wordsPromise = Promise.resolve('sentence without an end');
 
       return wordsPromise
@@ -74,7 +74,7 @@ describe('chaining multiple promises can enhance readability', () => {
       ;
     });
 
-    it('also asynchronously, the order still matters, promises wait, but don`t block', function() {
+    it('also asynchronously, the order still matters, promises wait, but don`t block', () => {  
       const wordsPromise = Promise.resolve('trailing space   ');
       return wordsPromise
         // CHANGE THE ORDER

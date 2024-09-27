@@ -2,7 +2,7 @@
 // Follow the hints of the failure messages!
 
 describe('Class creation', () => {
-  it('is as simple as `class XXX {}`', function() {
+  it('is as simple as `class XXX {}`', () => {  
     const instance = new TestClass();
     expect(typeof instance).toEqual(FILL_ME_IN);
   });
@@ -13,7 +13,7 @@ describe('Class creation', () => {
     expect(typeof FILL_ME_IN).toEqual('undefined');
   });
 
-  it('the `constructor` is a special method', function() {
+  it('the `constructor` is a special method', () => {  
     class User {
       constructor(id) { this.id = id }
     }
@@ -21,7 +21,7 @@ describe('Class creation', () => {
     expect(user.id).toEqual(FILL_ME_IN);
   });
 
-  it('defining a method by writing it inside the class body', function() {
+  it('defining a method by writing it inside the class body', () => {  
     class User {
         writesTests() {
             return true
@@ -31,7 +31,7 @@ describe('Class creation', () => {
     expect(notATester.writesTests()).toEqual(FILL_ME_IN);
   });
 
-  it('multiple methods need no commas (opposed to object notation)', function() {
+  it('multiple methods need no commas (opposed to object notation)', () => {  
     class User {
       constructor() { this.everWroteATest = FILL_ME_IN }
 

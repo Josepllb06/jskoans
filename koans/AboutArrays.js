@@ -1,7 +1,7 @@
-describe("About Arrays", function() {
+describe("About Arrays", () => {
 
   //We shall contemplate truth by testing reality, via spec expectations.
-  it("should create arrays", function() {
+  it("should create arrays", () => {
     const emptyArray = [];
     expect(emptyArray.length).toEqual(FILL_ME_IN);
 
@@ -14,11 +14,11 @@ describe("About Arrays", function() {
     expect(multiTypeArray[5][0]).toEqual(FILL_ME_IN);
   });
 
-  it("array type", function() {
+  it("array type", () => {
     expect(typeof([])).withContext("What is the type of an array?").toEqual(FILL_ME_IN);
   });
 
-  it("should understand array literals", function () {
+  it("should understand array literals", () => {
     const array = [];
     expect(array).toEqual([]);
 
@@ -32,7 +32,7 @@ describe("About Arrays", function() {
     expect(array).toEqual(FILL_ME_IN);
   });
 
-  it("should understand array length", function () {
+  it("should understand array length", () => {
     const fourNumberArray = [1, 2, 3, 4];
 
     expect(fourNumberArray.length).toEqual(FILL_ME_IN);
@@ -46,7 +46,7 @@ describe("About Arrays", function() {
     expect(tenEmptyElementArray.length).toEqual(FILL_ME_IN);
   });
 
-  it("should slice arrays", function () {
+  it("should slice arrays", () => {
     var array = ["peanut", "butter", "and", "jelly"];
 
     expect(array.slice(0, 1)).toEqual(FILL_ME_IN);
@@ -58,7 +58,7 @@ describe("About Arrays", function() {
     expect(array.slice(5, 1)).toEqual(FILL_ME_IN);
   });
 
-  it("should know array references", function () {
+  it("should know array references", () => {
     var array = [ "zero", "one", "two", "three", "four", "five" ];
 
     function passedByReference(refArray) {
@@ -76,7 +76,7 @@ describe("About Arrays", function() {
     expect(array[3]).toEqual(FILL_ME_IN);
   });
 
-  it("should push and pop", function () {
+  it("should push and pop", () => {
     var array = [1, 2];
     array.push(3);
 
@@ -87,7 +87,7 @@ describe("About Arrays", function() {
     expect(array).toEqual(FILL_ME_IN);
   });
 
-  it("should know about shifting arrays", function () {
+  it("should know about shifting arrays", () => {
     var array = [1, 2];
 
     array.unshift(3);

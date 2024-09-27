@@ -5,13 +5,13 @@ describe('`Array.from` converts an array-like object or list into an Array', () 
 
   const arrayLike = {0: 'one', 1: 'two', length: 2};
 
-  it('call `Array.from` with an array-like object', function() {
+  it('call `Array.from` with an array-like object', () => {  
     const arr = Array.from(arrayLike);
 
     expect(arr).toEqual(FILL_ME_IN);
   });
 
-  it('a DOM node`s classList object can be converted', function() {
+  it('a DOM node`s classList object can be converted', () => {  
     const domNode = document.createElement('span');
     domNode.classList.add('some');
     domNode.classList.add('other');
@@ -20,7 +20,7 @@ describe('`Array.from` converts an array-like object or list into an Array', () 
     expect(''+classList).toEqual('' + FILL_ME_IN);
   });
 
-  it('convert a NodeList to an Array and `filter()` works on it', function() {
+  it('convert a NodeList to an Array and `filter()` works on it', () => {  
     const nodeList = document.createElement('span');
     const divs = Array.from(nodeList).filter((node) => node.tagName === 'div');
 
@@ -28,7 +28,7 @@ describe('`Array.from` converts an array-like object or list into an Array', () 
   });
 
   describe('custom conversion using a map function as second param', () => {
-    it('we can modify the value before putting it in the array', function() {
+    it('we can modify the value before putting it in the array', () => {  
       const arr = Array.from(arrayLike, (value) => value.toUpperCase());
 
       expect(arr).toEqual(FILL_ME_IN);

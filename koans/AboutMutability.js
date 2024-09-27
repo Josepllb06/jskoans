@@ -1,13 +1,13 @@
-describe("About Mutability", function() {
+describe("About Mutability", () => {
 
-  it("should expect object properties to be public and mutable", function () {
+  it("should expect object properties to be public and mutable", () => {
     var aPerson = {firstname: "John", lastname: "Smith" };
     aPerson.firstname = "Alan";
 
     expect(aPerson.firstname).toEqual(FILL_ME_IN);
   });
 
-  it("should understand that constructed properties are public and mutable", function () {
+  it("should understand that constructed properties are public and mutable", () => {
     function Person(firstname, lastname)
     {
       this.firstname = firstname;
@@ -19,7 +19,7 @@ describe("About Mutability", function() {
     expect(aPerson.firstname).toEqual(FILL_ME_IN);
   });
 
-  it("should know that variables inside a constructor and constructor args are private", function () {
+  it("should know that variables inside a constructor and constructor args are private", () => {
     function Person(firstname, lastname)
     {
       var fullName = firstname + " " + lastname;

@@ -1,18 +1,18 @@
 # JSKoans
 
-Estas koans estan basadas en las koans ya existentes de:
+These koans are base in the already existing (and old):
 - https://github.com/mrdavidlaing/javascript-koans
 - https://github.com/liammclennan/JavaScript-Koans
-- https://jskatas.org/
 
-## Como usarlas:
+## How to use them:
 
-1. Descargar el repositorio
-2. Abrir el archivo KoansRunner.html en el navegador.
-3. Ir resolviendo uno a uno los archivos que te va indicando el navegador hasta tenerlo todo en verde.
+1. Fork the repo
+2. Clone it
+3. Open RunKoans.html in the browser
+4. Go about solving all the files the browser indicates until you've reached full green enlightment. Start with `AboutExepect.js`
 
 ## ES6
 
-Las koans que incluyen ES6 en el nombre, cambian cosas respecto a las anteriores, ya que son de una version mas reciente de JavaScript. Por ejemplo, `var` pasa a ser `let` o `const` dependiendo del contexto.
+Koans including ES6 on its name change a bit with respect to the former ones since they're ES6, but c'mon it's 2024 now and it's fine to assume we're not gonna use `var` anymore except for this kind of old days educational excercises, so I'll skip the typical  `let` and `const` explanation 😉. 
 
-No hemos incluido todas las koans de ES6, solo las que consideramos mas basicas para poder trabajar. Si quieres hacerlas todas, puedes hacerlo desde su web https://jskatas.org/ o si prefieres hacerlo en local, tienes este repositorio: https://github.com/saruba/es6koans
+ES6 koans included here are the essential ones to get to work, but if you're feeling geeky enough once you've solved them, my dear old colleague [@saruba](https://github.com/saruba/) has a buch more ready for you [here](https://github.com/saruba/es6koans).

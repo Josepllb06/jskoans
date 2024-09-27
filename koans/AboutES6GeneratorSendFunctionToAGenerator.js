@@ -13,7 +13,7 @@ describe('Pass a function to a generator', () => {
     expect(iterator.next(fn).value).toEqual(FILL_ME_IN);
   });
 
-  it('pass a function to the iterator, which calls it', function() {
+  it('pass a function to the iterator, which calls it', () => {  
     function* generatorFunction() {
       yield (yield 1)();
     }

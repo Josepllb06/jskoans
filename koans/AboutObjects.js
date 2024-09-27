@@ -1,26 +1,26 @@
-describe("About Objects", function () {
-  it("object type", function() {
+describe("About Objects", () => {
+  it("object type", () => {
     var empty_object = {};
     expect(FILL_ME_IN).withContext('what is the type of an object?').toEqual(typeof(empty_object));
   });
 
-  describe("Properties", function () {
+  describe("Properties", () => {
     var megalomaniac;
 
-    beforeEach(function () {
+    beforeEach(() => {
        megalomaniac = {  mastermind: "Joker", henchwoman: "Harley" };
     });
 
-    it("should confirm objects are collections of properties", function () {
+    it("should confirm objects are collections of properties", () => {
       expect(megalomaniac.mastermind).toEqual(FILL_ME_IN);
     });
 
-    it("should confirm that properties are case sensitive", function () {
+    it("should confirm that properties are case sensitive", () => {
       expect(megalomaniac.henchwoman).toEqual(FILL_ME_IN);
       expect(megalomaniac.henchWoman).toEqual(FILL_ME_IN);
     });
 
-    it("dynamically adding properties", function() {
+    it("dynamically adding properties", () => {
       var person = {};
       person.__ = "Amory Blaine";
       person.__ = 102;
@@ -29,7 +29,7 @@ describe("About Objects", function () {
       expect(102).withContext("what is the person's age?").toEqual(person.age);
     });
 
-    it("adding properties from strings", function() {
+    it("adding properties from strings", () => {
       var person = {};
       person["__"] = "Amory Blaine";
       person["__"] = 102;
@@ -39,7 +39,7 @@ describe("About Objects", function () {
     });
   });
 
-  it("should know properties that are functions act like methods", function () {
+  it("should know properties that are functions act like methods", () => {
     var megalomaniac = {
       mastermind : "Brain",
       henchman: "Pinky",
@@ -53,7 +53,7 @@ describe("About Objects", function () {
     expect(FILL_ME_IN).toMatch(battleCry);
   });
 
-  it("should confirm that when a function is attached to an object, 'this' refers to the object", function () {
+  it("should confirm that when a function is attached to an object, 'this' refers to the object", () => {
     var currentDate = new Date();
     var currentYear = (currentDate.getFullYear());
     var megalomaniac = {
@@ -69,9 +69,9 @@ describe("About Objects", function () {
     expect(megalomaniac.calculateAge()).toEqual(FILL_ME_IN);
   });
 
-  describe("'in' keyword", function () {
+  describe("'in' keyword", () => {
     var megalomaniac;
-    beforeEach(function () {
+    beforeEach(() => {
       megalomaniac = {
         mastermind: "The Monarch",
         henchwoman: "Dr Girlfriend",
@@ -79,14 +79,14 @@ describe("About Objects", function () {
       };
     });
 
-    it("should have the bomb", function () {
+    it("should have the bomb", () => {
 
       var hasBomb = "theBomb" in megalomaniac;
 
       expect(hasBomb).toEqual(FILL_ME_IN);
     });
 
-    it("should not have the detonator however", function () {
+    it("should not have the detonator however", () => {
 
       var hasDetonator = "theDetonator" in megalomaniac;
 
@@ -94,7 +94,7 @@ describe("About Objects", function () {
     });
   });
 
-  it("should know that properties can be added and deleted", function () {
+  it("should know that properties can be added and deleted", () => {
     var megalomaniac = { mastermind : "Agent Smith", henchman: "Agent Smith" };
 
     expect("secretary" in megalomaniac).toEqual(FILL_ME_IN);
