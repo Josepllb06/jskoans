@@ -1,0 +1,13 @@
+{
+  "name": "jskoans",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://gitlab.com/devscola/jskoans.git",
+  "author": "Jaume Barber <jbarber@hipervincle.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jasmine": "^5.3.1",
+    "jasmine-core": "^5.3.0",
+    "live-server": "^1.2.2"
+  }
+}
