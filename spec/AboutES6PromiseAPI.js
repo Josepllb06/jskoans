@@ -38,8 +38,8 @@ describe('`Promise` API overview', () => {
     });
   });
 
-  const resolvingPromise = Promise.resolve();
-  const rejectingPromise = Promise.reject();
+  const resolvingPromise = new Promise.resolve();
+  const rejectingPromise = new Promise.reject();
 
   describe('`Promise.all()`', () => {
     it('`Promise.all([p1, p2])` resolves when all promises resolve', () => {

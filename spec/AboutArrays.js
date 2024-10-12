@@ -20,10 +20,10 @@ describe("About Arrays", () => {
 
   it("should understand array literals", () => {
     const array = [];
-    expect(array).toEqual([]);
+    expect(array).toEqual(FILL_ME_IN);
 
     array[0] = 1;
-    expect(array).toEqual([1]);
+    expect(array).toEqual(FILL_ME_IN);
 
     array[1] = 2;
     expect(array).toEqual([1, FILL_ME_IN]);

@@ -24,7 +24,7 @@ describe('About Expects', () => {
     expect(actualValue).toEqual(expectedValue);
   });
 
-  // Sometimes you need to be precise about what you "type."
+  // Sometimes you need to be precise about what you "type".
   it('should assert equality with ===', () => {
     var expectedValue = FILL_ME_IN;
     var actualValue = (1 + 1).toString();
