@@ -10,7 +10,7 @@ These koans are base in the already existing (and old):
 2. Clone it
 3. Install dependencies with `yarn`
 5. Run the project with `yarn start`
-4. Open spec folder and go about solving all the files the browser indicates until you've reached full green enlightment. Start with `AboutExepect.js`
+4. Open spec folder and go about solving all the files the browser indicates until you've reached full green enlightment. Start with `AboutExpects.js`
 
 ## ES6
 
